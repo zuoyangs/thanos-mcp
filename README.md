@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# thanos-mcp
-Thanos/Prometheus 指标查询 MCP Server - 支持 PromQL 即时/范围查询、高基数分析、告警规则审计、采集目标健康检查，提供 stdio/HTTP/Streamable HTTP 多种传输模式。
-=======
 # Thanos MCP Server
 
 基于 [MCP (Model Context Protocol)](https://modelcontextprotocol.io/) 的 Thanos/Prometheus 只读查询服务器，支持 PromQL 即时/范围查询、高基数分析（cardinality_analysis）、采集目标健康检查、告警规则审计、Store 组件巡检等运维能力，提供 stdio/HTTP/Streamable HTTP 多种传输模式及 Bearer Token/Basic Auth 认证。
@@ -238,4 +234,3 @@ kubectl apply -f k8s/service.yaml
 ## License
 
 MIT
->>>>>>> c27b64c (feat: 初始化项目 - Thanos 指标查询 MCP Server)
