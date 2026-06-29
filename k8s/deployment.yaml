@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: thanos-mcp
+  namespace: <your-namespace>
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: thanos-mcp
+  template:
+    metadata:
+      labels:
+        app: thanos-mcp
+    spec:
+      imagePullSecrets:
+      - name: harbor-secret
+      containers:
+      - name: thanos-mcp
+        image: <your-registry>/infra/thanos-mcp:v1.0.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+        env:
+        - name: TZ
+          value: "Asia/Shanghai"
+        - name: MCP_PORT
+          value: "8080"
+        readinessProbe:
+          tcpSocket:
+            port: 8080
+          initialDelaySeconds: 2
+          periodSeconds: 3 
+        livenessProbe:
+          tcpSocket:
+            port: 8080
+          initialDelaySeconds: 5
+          periodSeconds: 10

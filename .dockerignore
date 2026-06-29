@@ -1,0 +1,38 @@
+# Git
+.git
+.gitignore
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Build artifacts
+bin/
+dist/
+build/
+
+# Logs
+logs/
+*.log
+
+# Docker files (don't need to be in build context)
+Dockerfile
+docker-compose*.yml
+.dockerignore
+
+# Config with secrets (mount at runtime instead)
+# etc/config.yaml
+
+# Documentation
+*.md
+!README.md
+
+# Test files
+*_test.go
+*_tests.go
+
+# Temporary files
+*.tmp
+*.temp

@@ -1,0 +1,23 @@
+# Binaries
+thanos-mcp
+thanos-mcp.exe
+bin/
+
+# Logs
+logs/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Config (contains secrets - ignore all real configs, keep .example files)
+etc/
+!etc/*.example
+!etc/*.example.yaml
+
